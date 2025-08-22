@@ -3,89 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects — Jessica Cowell</title>
-  <meta name="description" content="Research software and cosmology projects by Jessica A. Cowell." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='72'>✨</text></svg>">
+  <title>Jessica A. Cowell</title>
+  <meta name="description" content="Jessica A. Cowell — DPhil student in Astrophysics at Oxford & Kavli IPMU. Higher‑order statistics, weak lensing, simulations." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='72'>🪐</text></svg>">
   <style>
-    :root{ --bg:#0b1020; --card:#121833; --text:#ecf0ff; --muted:#bcc6ff; --accent:#8ab4ff; --ring: rgba(138,180,255,.4); }
+    :root{
+      --bg: #070a1a;
+      --bg2:#0f1533;
+      --card:#0f1430;
+      --text:#e8ecff;
+      --muted:#b8c3ff;
+      --accent:#8aa9ff;
+      --ring: rgba(138,169,255,.35);
+    }
     *{box-sizing:border-box}
-    body{ margin:0; font:15px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial; color:var(--text); background: radial-gradient(1200px 800px at 10% -10%, #182045 0, transparent 60%), var(--bg); }
-    a{ color:var(--accent); text-decoration:none }
-    a:hover{ text-decoration:underline }
-    .wrap{ max-width:980px; margin:0 auto; padding:32px 20px 64px }
-    header{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 0 }
-    .brand{ display:flex; align-items:center; gap:12px }
-    .brand img{ width:40px; height:40px; border-radius:50%; box-shadow:0 0 0 3px var(--ring) }
-    nav a{ margin-left:16px; opacity:.9 }
-    h1{ font-size: clamp(28px, 4vw, 44px); margin: 0 0 8px }
-    h2{ font-size: 20px; margin: 0 0 12px; color: var(--muted) }
-    .grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:18px }
-    .card{ background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.25) }
-    footer{ opacity:.8; margin-top:36px; padding-top:18px; border-top:1px solid rgba(255,255,255,.08) }
-    @media (max-width: 860px){ .grid{ grid-template-columns: 1fr } }
+    html,body{height:100%}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial;color:var(--text);
+      background:linear-gradient(180deg,var(--bg),var(--bg2));}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:820px;margin:0 auto;padding:40px 18px 60px;text-align:center}
+
+    header nav{margin-top:12px}
+    nav a{margin:0 10px;opacity:.95}
+
+    .hero img{width:180px;height:180px;border-radius:50%;object-fit:cover;box-shadow:0 0 10px rgba(0,0,0,.6),0 0 0 5px var(--ring);margin-bottom:18px;overflow:hidden}
+    .hero h1{font-size:clamp(32px,5vw,52px);margin:0;color:var(--text)}
+    .hero h2{font-size:clamp(18px,2.5vw,24px);margin:10px 0 0;color:var(--muted)}
+
+    .cta{display:flex;justify-content:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#141a45;color:var(--text)}
+    .btn.primary{background:linear-gradient(180deg,#3557ff,#4a7dff)}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:40px;text-align:left}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px}
+
+    footer{opacity:.8;margin-top:40px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div class="brand">
-        <img alt="Avatar" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4"/>
-        <strong>Jessica A. Cowell</strong>
-      </div>
+    <header class="hero">
+      <!-- Make sure this image file is in your repo folder -->
+      <img src="./20220722_152927_Original.JPG" alt="Profile photo of Jessica Cowell">
+      <h1>Jessica A. Cowell</h1>
+      <h2>DPhil Student · Astrophysics · Oxford & Kavli IPMU</h2>
       <nav>
-        <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
-        <a href="cv.html">CV</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="#pubs">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main>
-      <h1>Projects</h1>
-      <p>Selected research and software projects in observational cosmology, higher‑order statistics, and simulations.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/jess-cow" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="btn" href="projects.html">View Projects</a>
+    </div>
 
-      <section class="grid">
-        <article class="card">
-          <h2>Marked Power Spectra Constraints from Weak Lensing</h2>
-          <p>Developed and applied marked angular power spectra estimators to Subaru HSC Y1 weak lensing, performing systematic tests and simulation‑based inference for S<sub>8</sub> and Ω<sub>m</sub>. Achieved ~40% tighter constraints over standard power spectra; competitive with other higher‑order statistics.</p>
-          <p><a href="https://arxiv.org/pdf/2507.12315" target="_blank" rel="noreferrer">Preprint</a></p>
-        </article>
-
-        <article class="card">
-          <h2>Optimising Marked Power Spectra</h2>
-          <p>Designed and validated new mark functions that can deliver up to 2× tighter cosmological constraints than unmarked power spectra, with robust performance across survey scenarios.</p>
-          <p><a href="https://doi.org/10.1093/mnras/stae2492/7881574" target="_blank" rel="noreferrer">MNRAS</a></p>
-        </article>
-
-        <article class="card">
-          <h2>Fast Projected Bispectrum — Filter‑Square Method</h2>
-          <p>Implemented a fast projection technique for bispectra (“filter‑square”), enabling efficient higher‑order analyses for upcoming large‑scale structure datasets.</p>
-          <p><a href="https://arxiv.org/abs/2409.07980" target="_blank" rel="noreferrer">OJA preprint</a></p>
-        </article>
-
-        <article class="card">
-          <h2>HalfDome Radio‑Sky Simulations</h2>
-          <p>Leading the integration of radio galaxy observables into the HalfDome N‑body suite for joint, multi‑wavelength analyses with CMB surveys (DESI, PFS, LSST, Euclid, SPHEREx, Roman, SO, CMB‑S4, LiteBIRD).</p>
-        </article>
-
-        <article class="card">
-          <h2>FLAMINGO Baryonic Feedback Study</h2>
-          <p>Planning and leadership of an investigation into the sensitivity of higher‑order statistics to baryonic feedback using FLAMINGO simulations.</p>
-        </article>
-
-        <article class="card">
-          <h2>Low‑z Cosmological Anisotropy with Pantheon+</h2>
-          <p>Model‑independent assessment of quadrupolar Hubble expansion and dipolar deceleration using GR simulations; ~2σ deviation from isotropy in the CMB frame with PV corrections.</p>
-          <p><a href="https://academic.oup.com/mnras/article/526/1/1482/7273134" target="_blank" rel="noreferrer">MNRAS</a></p>
-        </article>
-      </section>
-    </main>
+    <section id="pubs" class="cards">
+      <a class="card" href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%221%2FCowell%2C%20J%2FCowell%2C%20Jessica%20A%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq_author=(author_facet_hier%3A%221%2FCowell%2C%20J%2FCowell%2C%20Jessica%20A%22)&p_=0&q=author%3A%22Cowell%2C%20Jessica%20A.%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noreferrer">
+        <strong>Publications on ADS →</strong>
+        <div style="color:var(--muted)">Full, always‑up‑to‑date list</div>
+      </a>
+      <a class="card" id="cv" href="CV_schmidt.pdf" target="_blank" rel="noreferrer">
+        <strong>Download CV (PDF) →</strong>
+        <div style="color:var(--muted)">1–2 pages</div>
+      </a>
+      <a class="card" id="contact" href="mailto:jessica.cowell@physics.ox.ac.uk">
+        <strong>Contact →</strong>
+        <div style="color:var(--muted)">jessica.cowell@physics.ox.ac.uk</div>
+      </a>
+    </section>
 
     <footer>
       <small>© <span id="y"></span> Jessica A. Cowell</small>
     </footer>
   </div>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
