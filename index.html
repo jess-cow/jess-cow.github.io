@@ -1,122 +1,91 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!--
-    Drop this file in the root of your repo as `index.html`.
-    Turn on GitHub Pages: Settings → Pages → Source → `Deploy from a branch` (main).
-  -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>💻 Jess Cowell — Portfolio</title>
-  <meta name="description" content="PhD student site: research, projects, writing." />
-
-  <!-- Social (Open Graph + Twitter) -->
-  <meta property="og:title" content="Jess Cowell — Portfolio" />
-  <meta property="og:description" content="PhD student site: research, projects, writing." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://<your-username>.github.io/" />
-  <meta property="og:image" content="/assets/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" href="/assets/favicon.ico" />
+  <title>Projects — Jessica Cowell</title>
+  <meta name="description" content="Research software and cosmology projects by Jessica A. Cowell." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='72'>✨</text></svg>">
   <style>
-    :root {
-      --bg: #0b0b0c; /* dark default */
-      --text: #ececf1;
-      --muted: #9aa0a6;
-      --card: #151518;
-      --accent: #7c3aed; /* violet */
-      --link: #a78bfa;
-      --border: #27272a;
-    }
-    @media (prefers-color-scheme: light) {
-      :root { --bg: #ffffff; --text: #0b0b0c; --muted: #4b5563; --card: #f8fafc; --link: #6d28d9; --border: #e5e7eb; }
-    }
-    [data-theme="light"] { --bg: #ffffff; --text: #0b0b0c; --muted: #4b5563; --card: #f8fafc; --link: #6d28d9; --border: #e5e7eb; }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0; background: var(--bg); color: var(--text);
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-    }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container { max-width: 920px; margin: 0 auto; padding: 24px; }
-
-    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0 8px; border-bottom: 1px solid var(--border); position: sticky; top: 0; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 90%, transparent); }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand .avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--card); border: 1px solid var(--border); display: grid; place-items: center; font-weight: 700; }
-    .brand .title { font-weight: 700; letter-spacing: 0.3px; }
-    nav a { margin-left: 14px; padding: 6px 10px; border-radius: 12px; }
-    nav a:hover { background: var(--card); text-decoration: none; }
-
-    .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; padding: 32px 0; align-items: center; }
-    .hero h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); line-height: 1.15; }
-    .hero p { margin: 0; color: var(--muted); }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
-
-    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
-    .tag { display: inline-block; font-size: 12px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
-    .meta { color: var(--muted); font-size: 14px; }
-
-    footer { margin: 48px 0 24px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 16px; font-size: 14px; }
-
-    .btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 12px; padding: 10px 14px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; }
-    .btn:hover { filter: brightness(1.05); }
-
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
-
-    /* test output */
-    #tests { font-size: 13px; color: var(--muted); }
-    #tests .ok { color: #22c55e; }
-    #tests .fail { color: #ef4444; }
+    :root{ --bg:#0b1020; --card:#121833; --text:#ecf0ff; --muted:#bcc6ff; --accent:#8ab4ff; --ring: rgba(138,180,255,.4); }
+    *{box-sizing:border-box}
+    body{ margin:0; font:15px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial; color:var(--text); background: radial-gradient(1200px 800px at 10% -10%, #182045 0, transparent 60%), var(--bg); }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .wrap{ max-width:980px; margin:0 auto; padding:32px 20px 64px }
+    header{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 0 }
+    .brand{ display:flex; align-items:center; gap:12px }
+    .brand img{ width:40px; height:40px; border-radius:50%; box-shadow:0 0 0 3px var(--ring) }
+    nav a{ margin-left:16px; opacity:.9 }
+    h1{ font-size: clamp(28px, 4vw, 44px); margin: 0 0 8px }
+    h2{ font-size: 20px; margin: 0 0 12px; color: var(--muted) }
+    .grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:18px }
+    .card{ background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.25) }
+    footer{ opacity:.8; margin-top:36px; padding-top:18px; border-top:1px solid rgba(255,255,255,.08) }
+    @media (max-width: 860px){ .grid{ grid-template-columns: 1fr } }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="wrap">
     <header>
       <div class="brand">
-        <div class="avatar" aria-hidden="true">JC</div>
-        <div class="title">Jess Cowell</div>
-        <span class="tag">PhD • Research & Code</span>
+        <img alt="Avatar" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4"/>
+        <strong>Jessica A. Cowell</strong>
       </div>
       <nav>
-        <a href="#projects">Projects</a>
-        <a href="#research">Research</a>
-        <a href="#writing">Writing</a>
-        <a href="#contact">Contact</a>
-        <button id="theme" class="btn" type="button" aria-live="polite" aria-label="Toggle theme">🌓</button>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
     </header>
 
-    <section class="hero">
-      <div>
-        <h1>Hi, I’m Jess — I build/measure things with code.</h1>
-        <p>Stuff I’m into right now: N-point correlation functions, beyond 2-pt stats, marked power spectra, and making simulations actually tell us something.</p>
-        <p class="meta" style="margin-top:10px;">Open to collabs. Here’s the <a href="#contact">best way to reach me</a>.</p>
-      </div>
-      <div class="card">
-        <strong>TL;DR</strong>
-        <ul>
-          <li>PhD @ Kavli IPMU CD3</li>
-          <li>Research: cosmology, simulation analysis</li>
-          <li>Talks: AI for Coding (7 min), RANS vs LES</li>
-        </ul>
-        <a class="btn" href="/cv.pdf">Download CV</a>
-      </div>
-    </section>
+    <main>
+      <h1>Projects</h1>
+      <p>Selected research and software projects in observational cosmology, higher‑order statistics, and simulations.</p>
 
-    <section id="projects" style="margin-top:12px;">
-      <h2>Projects</h2>
-      <div class="grid">
+      <section class="grid">
         <article class="card">
-          <h3 style="margin-top:0;">Marked Power Spectra Toolkit</h3>
-          <p>A Python toolkit to compute and visualize marked power spectra on N-body outputs. Includes CLI + docs.</p>
-          <p class="meta">Code → <a href="https://github.com/<your-username>/marked-ps">GitHub</a></p>
+          <h2>Marked Power Spectra Constraints from Weak Lensing</h2>
+          <p>Developed and applied marked angular power spectra estimators to Subaru HSC Y1 weak lensing, performing systematic tests and simulation‑based inference for S<sub>8</sub> and Ω<sub>m</sub>. Achieved ~40% tighter constraints over standard power spectra; competitive with other higher‑order statistics.</p>
+          <p><a href="https://arxiv.org/pdf/2507.12315" target="_blank" rel="noreferrer">Preprint</a></p>
         </article>
+
         <article class="card">
-          <h3 style="margin-top:0;">Beyond 2-Point Stats</h3>
-          <p>Experiments with N-point correlation functions in the linear regime. Benchmarks vs. standard pipelines.</p>
-          <p class="meta">Preprint → <a href="https://arxiv.org/abs/xxxx.xxxxx">a
+          <h2>Optimising Marked Power Spectra</h2>
+          <p>Designed and validated new mark functions that can deliver up to 2× tighter cosmological constraints than unmarked power spectra, with robust performance across survey scenarios.</p>
+          <p><a href="https://doi.org/10.1093/mnras/stae2492/7881574" target="_blank" rel="noreferrer">MNRAS</a></p>
+        </article>
+
+        <article class="card">
+          <h2>Fast Projected Bispectrum — Filter‑Square Method</h2>
+          <p>Implemented a fast projection technique for bispectra (“filter‑square”), enabling efficient higher‑order analyses for upcoming large‑scale structure datasets.</p>
+          <p><a href="https://arxiv.org/abs/2409.07980" target="_blank" rel="noreferrer">OJA preprint</a></p>
+        </article>
+
+        <article class="card">
+          <h2>HalfDome Radio‑Sky Simulations</h2>
+          <p>Leading the integration of radio galaxy observables into the HalfDome N‑body suite for joint, multi‑wavelength analyses with CMB surveys (DESI, PFS, LSST, Euclid, SPHEREx, Roman, SO, CMB‑S4, LiteBIRD).</p>
+        </article>
+
+        <article class="card">
+          <h2>FLAMINGO Baryonic Feedback Study</h2>
+          <p>Planning and leadership of an investigation into the sensitivity of higher‑order statistics to baryonic feedback using FLAMINGO simulations.</p>
+        </article>
+
+        <article class="card">
+          <h2>Low‑z Cosmological Anisotropy with Pantheon+</h2>
+          <p>Model‑independent assessment of quadrupolar Hubble expansion and dipolar deceleration using GR simulations; ~2σ deviation from isotropy in the CMB frame with PV corrections.</p>
+          <p><a href="https://academic.oup.com/mnras/article/526/1/1482/7273134" target="_blank" rel="noreferrer">MNRAS</a></p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>© <span id="y"></span> Jessica A. Cowell</small>
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
