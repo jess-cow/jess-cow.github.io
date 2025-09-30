@@ -310,7 +310,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
-  - jekyll/scholar
+  - jekyll_scholar
 
 # Mimic GitHub Pages with --safe
 whitelist:
