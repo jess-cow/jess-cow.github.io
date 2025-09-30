@@ -1,14 +1,25 @@
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
 
+---
+layout: page
+permalink: /publications/
+title: Publications
+description: Here are my publications 🥳 
+nav: true
+author_profile: true
+nav_order: 3
+---
+<!-- _pages/publications.md -->
+<div class="publications">
+The full list is on 
+<a href='https://inspirehep.net/authors/1978707?ui-citation-summary=true' style='color: #6ab0d6;'> INSPIRE </a>
+
+{% bibliography -f {{ site.scholar.bibliography }} %}
+
+</div>
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
-
+{% bibliography -f {{ site.scholar.bibliography }} %}
 {% include base_path %}
 
 <!-- New style rendering if publication categories are defined -->
