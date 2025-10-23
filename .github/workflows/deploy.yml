@@ -90,10 +90,32 @@ jobs:
           value: ${{ github.repository }}
       - name: Install and Build 🔧
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          # Diagnostics
+          echo "--- Environment diagnostics ---"
+          ruby --version || true
+          gem --version || true
+          bundle --version || true
+          echo "GEM_HOME=$GEM_HOME"
+          echo "GEM_PATH=$GEM_PATH"
+          echo "PWD=$(pwd)"
+          ls -la || true
+
+          # Ensure system build deps commonly required by native gems (nokogiri, etc.)
+          sudo apt-get update
+          sudo apt-get install -y build-essential patch ruby-dev zlib1g-dev liblzma-dev \
+            libxml2-dev libxslt1-dev
+
+          # Install bundler that matches Gemfile.lock's BUNDLED WITH if necessary
+          # If your Gemfile.lock specifies a different bundler version, change 2.7.2 accordingly
+          gem install bundler -v 2.7.2 || true
+          bundle --version || true
+
+          # Install gems with verbose output so failures are visible in the logs
+          bundle install --jobs 4 --retry 3 --path vendor/bundle --verbose
+
+          # Build the site
           export JEKYLL_ENV=production
-          bundle exec jekyll build
+          bundle exec jekyll build --trace
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
